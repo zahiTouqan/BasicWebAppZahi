@@ -47,6 +47,6 @@ public class QueryProcessor {
         } else {
             return "";
         }
-        return "";
+
     }
 }
