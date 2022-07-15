@@ -19,31 +19,34 @@ public class QueryProcessor {
         } else if (query.contains("name")) {
            return "zahi";
         } else if (query.contains("plus")){ // TODO extend the program here
-            String[] queryParts = query.split(":");
-            String[] all = queryParts[1].split("%20");
-            int result = Integer.parseInt(all[3]) + Integer.parseInt(all[5]);
-            return String.valueOf(result);
+//            String[] queryParts = query.split(":");
+//            String[] all = queryParts[1].split("%20");
+//            int result = Integer.parseInt(all[3]) + Integer.parseInt(all[5]);
+//            return String.valueOf(result);
+            System.out.println(query);
         } else if (query.contains("largest")){
-            String[] queryParts = query.split(":");
-            String[] all = queryParts[2].split("%20");
-            List<String> arr = Arrays.asList(all);
-            List<Integer> toRemove = new ArrayList<>();
-            for (int i = 0; i < arr.size(); i++) {
-                if (Objects.equals(arr.get(i), "")) {
-                    toRemove.add(i);
-                } else if (arr.get(i).contains(",")) {
-                    arr.set(i, arr.get(i).replaceAll("[^a-zA-Z0-9]",""));
-                }
-            }
-
-            int[] nums = new int[arr.size() - 1];
-            for (int i = 1; i < arr.size(); i++) {
-                nums[i - 1] = Integer.parseInt(all[i]);
-            }
-            Arrays.sort(nums);
-            return String.valueOf(nums[nums.length - 1]);
+            System.out.println(query);
+//            String[] queryParts = query.split(":");
+//            String[] all = queryParts[2].split("%20");
+//            List<String> arr = Arrays.asList(all);
+//            List<Integer> toRemove = new ArrayList<>();
+//            for (int i = 0; i < arr.size(); i++) {
+//                if (Objects.equals(arr.get(i), "")) {
+//                    toRemove.add(i);
+//                } else if (arr.get(i).contains(",")) {
+//                    arr.set(i, arr.get(i).replaceAll("[^a-zA-Z0-9]",""));
+//                }
+//            }
+//
+//            int[] nums = new int[arr.size() - 1];
+//            for (int i = 1; i < arr.size(); i++) {
+//                nums[i - 1] = Integer.parseInt(all[i]);
+//            }
+//            Arrays.sort(nums);
+//            return String.valueOf(nums[nums.length - 1]);
         } else {
             return "";
         }
+        return "";
     }
 }
