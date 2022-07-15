@@ -28,7 +28,7 @@ public class QueryProcessor {
             Arrays.sort(nums);
             return nums[nums.length - 1];
         } else {
-            return ""
+            return "";
         }
     }
 }
