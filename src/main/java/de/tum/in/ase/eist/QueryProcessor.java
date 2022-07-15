@@ -13,8 +13,22 @@ public class QueryProcessor {
                     "writer in the English language and the world's pre-eminent dramatist.";
         } else if (query.contains("name")) {
            return "zahi";
-        } else { // TODO extend the programm here
-            return "";
+        } else if (query.contains("plus")){ // TODO extend the programm here
+            String[] queryParts = query.split(":");
+            String[] all = queryParts[1].split("%20");
+            int result = Integer.parseInt(all[2]) + Integer.parseInt(all[4]);
+            return result;
+        } else if (query.contains("largest")){
+            String[] queryParts = query.split(":");
+            String[] all = queryParts[1].split("%20");
+            int[] nums = new int[all.length];
+            for (int i = 0; i < all.length; i++) {
+                nums[i] = Integer.parseInt(all[i]);
+            }
+            Arrays.sort(nums);
+            return nums[nums.length - 1];
+        } else {
+            return ""
         }
     }
 }
