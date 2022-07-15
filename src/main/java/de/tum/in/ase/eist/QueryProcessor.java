@@ -23,9 +23,9 @@ public class QueryProcessor {
 //            String[] all = queryParts[1].split("%20");
 //            int result = Integer.parseInt(all[3]) + Integer.parseInt(all[5]);
 //            return String.valueOf(result);
-            System.out.println(query);
+            return query;
         } else if (query.contains("largest")){
-            System.out.println(query);
+            return query;
 //            String[] queryParts = query.split(":");
 //            String[] all = queryParts[2].split("%20");
 //            List<String> arr = Arrays.asList(all);
