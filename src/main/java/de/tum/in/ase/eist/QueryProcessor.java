@@ -21,7 +21,7 @@ public class QueryProcessor {
         } else if (query.contains("plus")){ // TODO extend the program here
             String[] queryParts = query.split(":");
             String[] all = queryParts[1].split("%20");
-            int result = Integer.parseInt(all[2]) + Integer.parseInt(all[4]);
+            int result = Integer.parseInt(all[3]) + Integer.parseInt(all[5]);
             return String.valueOf(result);
         } else if (query.contains("largest")){
             String[] queryParts = query.split(":");
